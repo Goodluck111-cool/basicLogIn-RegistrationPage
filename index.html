@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!--registration form -->
+      <div class="form-container sign-up-container">
+        <form id="registerForm" action="#">
+          <h1>join us</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Use Your Email To SignUp</span>
+          <input
+            id="registrationEmail"
+            type="email"
+            name="email"
+            placeholder="Enter Your email"
+            required
+          />
+          <input
+            id="registrationPassword"
+            type="password"
+            name="password"
+            placeholder="Create password"
+            required
+          />
+          <button  type="submit">Register</button>
+        </form>
+      </div>
+
+      <!-- sign form -->
+
+      <div class="form-container sign-in-container">
+        <form id="loginForm" action="#">
+          <h1>login</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Use Your Account LogIn</span>
+          <input id="loginEmail" type="email" name="email" placeholder="Email" required />
+          <input
+            id="loginPassword"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <!-- <a href="#">Forgot Your Password?</a> -->
+          <button type="submit">Log In</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-pannel overlay-left">
+            <h1>Welcome Back,</h1>
+            <p>Already have an Account</p>
+            <img src="download.jpg" style="width: 150px; margin-top: 20px" />
+            <p>Log in to stay connected with us</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+
+          <div class="overlay-pannel overlay-right">
+            <h1>Welcome !</h1>
+            <img src="padlock.jpg" style="width: 150px; margin-top: 20px" />
+            <p>Sign Up to stay connected with us</p>
+            <button class="ghost" id="signUp">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!-- my script -->
+    <script type="module" src="main.js" defer></script>
+<!-- icon script -->
+    <script
+      src="https://kit.fontawesome.com/b5e2e61972.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
