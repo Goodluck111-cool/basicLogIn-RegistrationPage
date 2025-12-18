@@ -11,7 +11,7 @@
       <!--registration form -->
       <div class="form-container sign-up-container">
         <form id="registerForm" action="#">
-          <h1>join us</h1>
+          <h1>Join us</h1>
           <div class="social-container">
             <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -25,14 +25,20 @@
             placeholder="Enter Your email"
             required
           />
-          <input
-            id="registrationPassword"
-            type="password"
-            name="password"
-            placeholder="Create password"
-            required
-          />
-          <button  type="submit">Register</button>
+          <div class="password-wrapper">
+            <input
+              id="registrationPassword"
+              type="password"
+              placeholder="Create password"
+              required
+            />
+            <i
+              class="fa-solid fa-eye toggle-password"
+              data-target="registrationPassword"
+            ></i>
+          </div>
+
+          <button type="submit">Register</button>
         </form>
       </div>
 
@@ -47,15 +53,27 @@
             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
           </div>
           <span>Use Your Account LogIn</span>
-          <input id="loginEmail" type="email" name="email" placeholder="Email" required />
           <input
-            id="loginPassword"
-            type="password"
-            name="password"
-            placeholder="Password"
+            id="loginEmail"
+            type="email"
+            name="email"
+            placeholder="Email"
             required
           />
-          <!-- <a href="#">Forgot Your Password?</a> -->
+          <div class="password-wrapper">
+            <input
+              id="loginPassword"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <i
+              class="fa-solid fa-eye toggle-password"
+              data-target="loginPassword"
+            ></i>
+          </div>
+
+          <a href="#" id="forgotPassword">Forgot your password?</a>
           <button type="submit">Log In</button>
         </form>
       </div>
@@ -78,14 +96,15 @@
           </div>
         </div>
       </div>
+
     </div>
+    <button id="mobileSwitchBtn" class="mobile-switch">
+      Register
+    </button>
 
-
-
-
-<!-- my script -->
+    <!-- my script -->
     <script type="module" src="main.js" defer></script>
-<!-- icon script -->
+    <!-- icon script -->
     <script
       src="https://kit.fontawesome.com/b5e2e61972.js"
       crossorigin="anonymous"

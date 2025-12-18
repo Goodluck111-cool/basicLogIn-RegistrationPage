@@ -5,6 +5,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 
@@ -37,6 +38,42 @@ signInButton.addEventListener("click", () => {
   container.classList.remove("right-pannel-active");
 });
 
+// 📱 Mobile switch button
+const mobileSwitchBtn = document.getElementById("mobileSwitchBtn");
+
+if (mobileSwitchBtn) {
+  mobileSwitchBtn.addEventListener("click", () => {
+    container.classList.toggle("right-pannel-active");
+
+    mobileSwitchBtn.textContent =
+      container.classList.contains("right-pannel-active")
+        ? "Login"
+        : "Register";
+  });
+}
+
+
+//  Show / Hide Password with Eye Icon
+document.querySelectorAll(".toggle-password").forEach((icon) => {
+  icon.addEventListener("click", () => {
+    const inputId = icon.getAttribute("data-target");
+    const passwordInput = document.getElementById(inputId);
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      passwordInput.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  });
+});
+
+
+
+
 
 // 4️⃣ REGISTER USER
 document.getElementById("registerForm").addEventListener("submit", (e) => {
@@ -67,4 +104,24 @@ document.getElementById("loginForm").addEventListener("submit", (e) => {
       window.location.href = "homepage.html";
     })
     .catch((error) => alert(error.message));
+});
+
+// 🔐 FORGOT PASSWORD
+document.getElementById("forgotPassword").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("loginEmail").value;
+
+  if (!email) {
+    alert("Please enter your email first.");
+    return;
+  }
+
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      alert("Password reset email sent. Check your inbox.");
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
 });
