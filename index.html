@@ -7,15 +7,16 @@
     <title>Login Form</title>
   </head>
   <body>
+    <h1 class="taskflow">Task<span class="Flow">Flow</span ></h1>
+
     <div class="container" id="container">
       <!--registration form -->
       <div class="form-container sign-up-container">
         <form id="registerForm" action="#">
-          <h1>Join us</h1>
+          <h1>JOIN US</h1>
           <div class="social-container">
-            <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            <button class="social"><i class="fa-brands fa-facebook"></i></button>
+            <button class="social google-signin" id="googleSignUp"><i class="fab fa-google"></i></button>
           </div>
           <span>Use Your Email To SignUp</span>
           <input
@@ -46,11 +47,10 @@
 
       <div class="form-container sign-in-container">
         <form id="loginForm" action="#">
-          <h1>login</h1>
+          <h1>LOGIN</h1>
           <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            <button  class="social"><i class="fab fa-facebook"></i></button>
+            <button class="social google-signin" id="googleSignIn"><i class="fab fa-google"></i></button>
           </div>
           <span>Use Your Account LogIn</span>
           <input
@@ -96,11 +96,8 @@
           </div>
         </div>
       </div>
-
     </div>
-    <button id="mobileSwitchBtn" class="mobile-switch">
-      Register
-    </button>
+    <button id="mobileSwitchBtn" class="mobile-switch">Register</button>
 
     <!-- my script -->
     <script type="module" src="main.js" defer></script>
@@ -109,5 +106,7 @@
       src="https://kit.fontawesome.com/b5e2e61972.js"
       crossorigin="anonymous"
     ></script>
+    <!-- massages better UI -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
